@@ -4,9 +4,11 @@ Pokemon Team Combinations Calculator
 Given an input csv of pkmn stats and some filter settings, calculates the best possible team combinations.
 
 requires python3
+
 pip3 install --user numpy sortedcontainers pandas scipy
 
 if numpy import errory try 'pip3 uninstall numpy' repeatedly until all versions are removed
+
 
 Load a csv into unprocessed_stats_path with at minimum these columns ['Name','Type1','Type2', 'HP','Atk','Def','SpecialAtk','SpecialDef','Speed', 'Ability1','Ability2','HiddenAbility']
   - the Ability cols are still required, even if the generation doesnt support abilities. Just have empty cols.
