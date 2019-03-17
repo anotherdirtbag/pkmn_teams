@@ -41,7 +41,7 @@ from math import sqrt
 currentdir = os.path.dirname(sys.argv[0])
 
 #*********** user variables ***********
-generation = 6
+generation = 4
 seededchoices_names = set() #set(['Wobbuffet']) #names of pkmn to include in every set. must exactly match those in the input csv
 # dramaticaly affects speed
 
