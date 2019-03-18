@@ -127,7 +127,7 @@ For another example, if team 60 59 58 57 56 55 does not score high enough then n
 ### Other Settings
 
 `maxresultsize`
-The number of teams to save to team_results_path. Setting this too large will negatively affect speed.
+The number of teams to save to `team_results_path`. Setting this too large will negatively affect speed.
 
 `resumethreads`
 When enabled, saves the current session to a .pickle file every print statement and loads that data on start if it exists.
