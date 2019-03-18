@@ -21,7 +21,6 @@ Yada yada yada, I put the game down and made this script.
 
 python 3
 
-
 `pip3 install --user numpy sortedcontainers pandas scipy`
 
 
@@ -30,10 +29,9 @@ python 3
 
 Load a csv into `unprocessed_stats_path` with at minimum these columns ['Name','Type1','Type2', 'HP','Atk','Def','SpecialAtk','SpecialDef','Speed', 'Ability1','Ability2','HiddenAbility']
 - If the generation doesn't support abilities, they will be ignored by the script, but the csv columns are still required.
-Also, if generation 1, make sure SpecialAtk = SpecialDef in the csv.
+- Also, if generation 1, make sure SpecialAtk = SpecialDef in the csv.
 - Exclude pokemon with alternate form abilities like Darmanitan(Zen Mode) and Wishiwashi(Schooling). Use `seededchoices_names` if you insist on using them.
 - Abilities that affect resistances and Truant are specifically handled in this script. Let me know if there are ways to handle other abilities. 
-
 
 Define output filenames for `processed_stats_path` and `team_results_path`.
 
@@ -103,7 +101,8 @@ Threshold to the number of pokemon that can favor attack vs special attack and v
 
 The math behind calculating all possible combinations is handled in the IndexedCombination class. 
 
-```pkmnpool = list(range(total_pkmn_in_csv))[::-1]
+```
+pkmnpool = list(range(total_pkmn_in_csv))[::-1]
 combinator = IndexedCombination(6,pkmnpool)
 for setindex in range(combinator.totalcombinations):
     fullset = combinator.get_nth_combination(setindex)
