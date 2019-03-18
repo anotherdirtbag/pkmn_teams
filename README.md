@@ -27,7 +27,7 @@ python 3
 
 ### Instructions
 
-Load a csv into `unprocessed_stats_path` with at minimum these columns ['Name','Type1','Type2', 'HP','Atk','Def','SpecialAtk','SpecialDef','Speed', 'Ability1','Ability2','HiddenAbility']
+Load a csv into `unprocessed_stats_path` with at minimum these columns [Name, Type1, Type2, HP, Atk, Def, SpecialAtk, SpecialDef, Speed, Ability1, Ability2, HiddenAbility]
 - If the generation doesn't support abilities, they will be ignored by the script, but the csv columns are still required.
 - Also, if generation 1, make sure SpecialAtk = SpecialDef in the csv.
 - Exclude pokemon with alternate form abilities like Darmanitan(Zen Mode) and Wishiwashi(Schooling). Use `seededchoices_names` if you insist on using them.
@@ -110,15 +110,15 @@ for setindex in range(combinator.totalcombinations):
         teamcompare = list(fullset) + teamstats(fullset)
         threadSortedResults.add(teamcompare)
 ```
-This shows iterating through every possible team combination and adding those that pass the filtering settings to threadSortedResults.
+This shows iterating through every possible team combination and adding those that pass the filtering settings to `threadSortedResults`.
 
-Once threadSortedResults has reached maxresultsize, only teams with a combined score high enough will be added to the list. 
+Once `threadSortedResults` has reached `maxresultsize`, only teams with a combined score high enough will be added to the list. 
 
 The combinations are sorted in what's called reverse co-lexographical order, where the pokemon are sorted by descending Score. This means a pokemon with an index of 75 has a higher Score then all pokemon with an index <75.
 
 As such, we can guarantee that if team
-75 74 73 72 71 50 has a score lower than the lowest scoring team in threadSortedResults. Then all teams with
-75 74 73 72 71 and <50 will also not score high enough. skiptonextmaxima then skips to 74 73 72 70 69. 
+75 74 73 72 71 50 has a score lower than the lowest scoring team in `threadSortedResults`. Then all teams with
+75 74 73 72 71 and <50 will also not score high enough. IndexedCombination::skiptonextmaxima then skips to 74 73 72 70 69. 
 
 For another example, if team 60 59 58 57 56 55 does not score high enough then no further combinations need to be evaluated.
 
@@ -128,7 +128,6 @@ For another example, if team 60 59 58 57 56 55 does not score high enough then n
 
 `maxresultsize`
 The number of teams to save to team_results_path. Setting this too large will negatively affect speed.
-
 
 `resumethreads`
 When enabled, saves the current session to a .pickle file every print statement and loads that data on start if it exists.
