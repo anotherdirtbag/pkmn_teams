@@ -119,7 +119,7 @@ The combinations are sorted in what's called reverse co-lexographical order, whe
 
 As such, we can guarantee that if team
 75 74 73 72 71 50 has a score lower than the lowest scoring team in `threadSortedResults`. Then all teams with
-75 74 73 72 71 and <50 will also not score high enough. IndexedCombination::skiptonextmaxima then skips to 74 73 72 70 69. 
+75 74 73 72 71 and <50 will also not score high enough. IndexedCombination::skiptonextmaxima then skips to 75 74 73 72 70 69. 
 
 For another example, if team 60 59 58 57 56 55 does not score high enough then no further combinations need to be evaluated.
 
