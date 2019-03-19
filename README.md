@@ -6,6 +6,7 @@
 Given an input csv of pokemon stats and some filter settings, this script searches for the best possible team combinations and exports the results as a csv.
 
 
+[TLDR Gimme the Results](#results)
 
 ### Backstory
 
