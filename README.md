@@ -101,7 +101,7 @@ Threshold to the number of pokemon that can favor attack vs special attack and v
 
 The math behind calculating all possible combinations is handled in the IndexedCombination class. 
 
-```
+```python
 pkmnpool = list(range(total_pkmn_in_csv))[::-1]
 combinator = IndexedCombination(6,pkmnpool)
 for setindex in range(combinator.totalcombinations):
@@ -134,6 +134,62 @@ When enabled, saves the current session to a .pickle file every print statement 
 
 `nprintsplit`
 Controls how many iterations will run between printing to console and saving progress. For very long processing jobs, this will positively affect speed.
+
+
+# Results
+
+Using the default settings and the included csvs.
+
+### Gen7 No Legendaries
+
+```
+"pokemonstats - gen7 no legendaries.unprocessed.csv"
+assuming Hydreigon has Levitate
+assuming Snorlax has Thick Fat
+assuming Vikavolt has Levitate
+187500601680 combinations using 229 pkmn
+finished in 1154.4 seconds
+```
+
+1 | 2 | 3 | 4 | 5 | 6 | MaxAtk | TotalDef | TotalOffense | Score | Sum Team Weaknesses | Count Vulnerable Types | Count 4x Weaknesses
+--|--|--|--|--|--|--|--|--|--|--|--|--
+**Offensive** |--|--|--|--|--|--|--|--|--|--|--|--
+Tyranitar | Dragonite | Metagross | Reuniclus | Vikavolt | Porygon-Z | 808 | 521.79 | 541.59 | 647.98 | 114.5 | 7 | 2
+Tyranitar | Garchomp | Metagross | Vikavolt | Drampa | Chandelure | 824 | 511.57 | 559.15 | 647.43 | 113 | 8 | 2
+Tyranitar | Salamence | Metagross | Reuniclus | Vikavolt | Porygon-Z | 809 | 515.99 | 554.24 | 644.84 | 114.5 | 7 | 2
+Tyranitar | Metagross | Hydreigon | Reuniclus | Excadrill | Togekiss | 774 | 537.78 | 566.51 | 644.56 | 113.5 | 9 | 2
+Tyranitar | Dragonite | Metagross | Drampa | Chandelure | Porygon-Z | 818 | 509.88 | 578.8 | 644.52 | 113.75 | 8 | 2
+**Defensive** |--|--|--|--|--|--|--|--|--|--|--|--
+Tyranitar | Escavalier | Reuniclus | Snorlax | Drampa | Togekiss | 759 | 549.83 | 428.75 | 644.5 | 113.25 | 6 | 2
+Tyranitar | Metagross | Reuniclus | Snorlax | Vikavolt | Togekiss | 769 | 543.52 | 483.25 | 644.07 | 111.75 | 7 | 1
+Tyranitar | Metagross | Reuniclus | Snorlax | Drampa | Togekiss | 759 | 548.95 | 474 | 643.94 | 113.75 | 7 | 1
+Tyranitar | Metagross | Hydreigon | Snorlax | Vikavolt | Chandelure | 794 | 527.31 | 542.41 | 643.55 | 110.5 | 7 | 2
+Tyranitar | Metagross | Snorlax | Vikavolt | Drampa | Togekiss | 779 | 534.11 | 491.72 | 642.36 | 110.75 | 5 | 1
+Garchomp | Escavalier | Reuniclus | Snorlax | Vikavolt | Drampa | 780 | 531.77 | 434.47 | 641.47 | 109.25 | 6 | 2
+
+
+### Gen7 All
+
+```
+"pokemonstats - gen7 all.unprocessed.csv"
+assuming Giratina (O) has Levitate
+1043156809240 combinations using 304 pkmn
+finished in 34.1 seconds
+```
+
+1 | 2 | 3 | 4 | 5 | 6 | MaxAtk | TotalDef | TotalOffense | Score | Sum Team Weaknesses | Count Vulnerable Types | Count 4x Weaknesses
+--|--|--|--|--|--|--|--|--|--|--|--|--
+**Offensive** |--|--|--|--|--|--|--|--|--|--|--|--
+Regigigas | Solgaleo | Mewtwo | Zekrom | Dialga | Yveltal | 882 | 627.5 | 729.52 | 742.97 | 105.75 | 5 | 0
+Regigigas | Solgaleo | Mewtwo | Reshiram | Dialga | Yveltal | 882 | 627.5 | 729.52 | 742.97 | 105 | 4 | 0
+Regigigas | Solgaleo | Mewtwo | Dialga | Rayquaza | Xerneas | 882 | 624.71 | 732.71 | 741.25 | 106.25 | 4 | 1
+**Defensive** |--|--|--|--|--|--|--|--|--|--|--|--
+Regigigas | Solgaleo | Zekrom | Dialga | Giratina (O) | Xerneas | 848 | 652.3 | 691.95 | 741.56 | 101.75 | 5 | 0
+Regigigas | Solgaleo | Reshiram | Dialga | Giratina (O) | Yveltal | 848 | 652.3 | 691.95 | 741.56 | 102 | 7 | 0
+Regigigas | Solgaleo | Reshiram | Dialga | Giratina (O) | Xerneas | 848 | 652.3 | 691.95 | 741.56 | 101 | 3 | 0
+Regigigas | Solgaleo | Dialga | Giratina (O) | Arceus | Yveltal | 818 | 672.3 | 695.76 | 739.08 | 102 | 4 | 0
+Regigigas | Solgaleo | Dialga | Giratina (O) | Arceus | Xerneas | 818 | 672.3 | 695.76 | 739.08 | 101 | 3 | 0
+
 
 
 
