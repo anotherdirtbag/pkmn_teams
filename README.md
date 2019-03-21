@@ -142,6 +142,25 @@ Controls how many iterations will run between printing to console and saving pro
 Using the default settings and the included csv's.
 
 
+### Gen2 No Legendaries
+
+```
+"pokemonstats - gen2 no legendaries.unprocessed.csv"
+4042116078 combinations using 122 pkmn
+finished in 26.3 seconds
+```
+
+1 | 2 | 3 | 4 | 5 | 6 | MaxAtk | TotalDef | TotalOffense | Score | Sum Team Weaknesses | Count Vulnerable Types | Count 4x Weaknesses
+--|--|--|--|--|--|--|--|--|--|--|--|--
+**Offensive** |--|--|--|--|--|--|--|--|--|--|--|--
+Tyranitar | Dragonite | Machamp | Vaporeon | Ampharos | Arcanine | 733 | 533.160111910447 | 544.81806461984 | 624.784663590217 | 107.75 | 6 | 2
+Tyranitar | Dragonite | Machamp | Vaporeon | Ampharos | Typhlosion | 732 | 526.307298168062 | 546.995888207642 | 620.379311314597 | 107.75 | 6 | 2
+**Defensive** |--|--|--|--|--|--|--|--|--|--|--|--
+Tyranitar | Dragonite | Snorlax | Vaporeon | Ampharos | Slowking | 703 | 552.612853568345 | 470.253032707994 | 622.42855954439 | 108.75 | 8 | 2
+Tyranitar | Dragonite | Snorlax | Vaporeon | Ampharos | Slowbro | 703 | 552.612853568345 | 470.253032707994 | 622.42855954439 | 108.75 | 8 | 2
+Tyranitar | Dragonite | Snorlax | Vaporeon | Ampharos | Gengar | 733 | 525.434874697532 | 535.063384388491 | 617.377019731947 | 106.75 | 5 | 2
+
+
 ### Gen4 Soul Silver Catchable Only No Legendaries
 
 ```
@@ -151,7 +170,6 @@ assuming Snorlax has Thick Fat
 assuming Vaporeon has Water Absorb
 170230452 combinations using 73 pkmn
 finished in 21.6 seconds
-
 ```
 
 1 | 2 | 3 | 4 | 5 | 6 | MaxAtk | TotalDef | TotalOffense | Score | Sum Team Weaknesses | Count Vulnerable Types | Count 4x Weaknesses
